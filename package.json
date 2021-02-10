@@ -1,0 +1,30 @@
+{
+  "name": "svelte-heroicons",
+  "description": "Svelte component for Heroicons",
+  "version": "0.1.0",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "repository": "github:martinse/svelte-heroicons",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-multi-entry": "^4.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "rollup": "^2.0.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.0.0"
+  },
+  "keywords": [
+    "svelte",
+    "heroicons"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT"
+}

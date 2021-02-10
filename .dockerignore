@@ -1,0 +1,9 @@
+.*.swp
+a.out
+*.orig
+.idea
+.DS_Store
+.git/
+.gitignore
+node_modules/
+dist/

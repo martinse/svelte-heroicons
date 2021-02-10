@@ -1,0 +1,52 @@
+version: '3'
+
+
+vars:
+    VERSION: 0.1.0
+    NODE_VERSION: 15
+    HEROICONS_VERSION: 0.4.2
+
+    DOCKER_VOLUMES: "-v $(pwd):/app"
+    TAG: "svelte/heroicons"
+
+
+tasks:
+    build:
+        cmds:
+            - |
+                DOCKER_BUILDKIT=1 docker build \
+                    --build-arg NODE_VERSION={{.NODE_VERSION}} \
+                    --build-arg HEROICONS_VERSION={{.HEROICONS_VERSION}} \
+                    --tag {{.TAG}}:{{.VERSION}} .
+            - |
+                docker run {{.DOCKER_VOLUMES}} {{.DOCKER_RUN_PARAMS}} \
+                -it  \
+                {{.TAG}}:{{.VERSION}} \
+                npm install
+
+    generate-icon-data:
+        cmds:
+            - |
+                docker run  {{.DOCKER_VOLUMES}} {{.DOCKER_RUN_PARAMS}} \
+                -it  \
+                {{.TAG}}:{{.VERSION}} \
+                ./bin/generate-heroicon-data.sh
+
+    build-npm-dist:
+        cmds:
+            - |
+                docker run  {{.DOCKER_VOLUMES}} {{.DOCKER_RUN_PARAMS}} \
+                -it  \
+                {{.TAG}}:{{.VERSION}} \
+                npm run build
+
+    publish:
+        cmds:
+            - echo "TODO"
+
+    shell:
+        cmds:
+            - |
+                docker run {{.DOCKER_VOLUMES}} {{.DOCKER_RUN_PARAMS}} \
+                -it --entrypoint /bin/bash \
+                {{.TAG}}:{{.VERSION}}
