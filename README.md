@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm i -S svelte-heroicons
+npm i -S @martinse/svelte-heroicons
 ```
 
 
