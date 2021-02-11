@@ -26,7 +26,6 @@ npm i -S @martinse/svelte-heroicons
 <Heroicon icon={outlineHeart} />
 <Heroicon icon={outlineHeart} size="2em" />
 <Heroicon icon={solidHeart} size="3em" class="red" />
-<Heroicon icon={solidHeart} size="3em" class="red animated" />
 
 
 <style>
