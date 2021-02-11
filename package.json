@@ -1,11 +1,14 @@
 {
-  "name": "svelte-heroicons",
+  "name": "@martinse/svelte-heroicons",
   "description": "Svelte component for Heroicons",
   "version": "0.1.0",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
-  "repository": "github:martinse/svelte-heroicons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinse/svelte-heroicons.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
@@ -26,5 +29,13 @@
     "dist",
     "src"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinse/svelte-heroicons/issues"
+  },
+  "homepage": "https://github.com/martinse/svelte-heroicons#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "@martinse"
 }
