@@ -15,9 +15,9 @@ npm i -S @martinse/svelte-heroicons
 ```sveltehtml
 
 <script>
-    import Heroicon from 'svelte-heroicons';
-    import {heart as solidHeart} from 'svelte-heroicons/dist/solid';
-    import {heart as outlineHeart} from 'svelte-heroicons/dist/outline';
+    import Heroicon from '@martinse/svelte-heroicons';
+    import {heart as solidHeart} from '@martinse/svelte-heroicons/dist/solid';
+    import {heart as outlineHeart} from '@martinse/svelte-heroicons/dist/outline';
 </script>
 
 
@@ -83,6 +83,7 @@ package.
 ## Improvements
 
 * [ ] Avoid the `/dist` path when importing solid or outline
+* [ ] Investigate using this package with Svelte + Snowpack (or SvelteKit) as there seems to be an issue with the Rollup configuration
 * [ ] Add tests
 * [ ] Add linting
 * [ ] Create a proper demo page + figure out how to publish a Svelte app to GitHub pages
