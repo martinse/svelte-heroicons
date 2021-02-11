@@ -83,7 +83,8 @@ Docker container + build/publish the NPM package.
 ## Improvements
 * [ ] Avoid the `/dist` path when importing solid our outline
 * [ ] Add tests
-* [ ] Create a proper demo page + figure out how to publish a Svelte app to GitHub pages.
+* [ ] Create a proper demo page + figure out how to publish a Svelte app to GitHub pages
+* [ ] Sync version in `Taskfile.yml` and `package.json` automatically
 * [ ] Probably a lot more, feel free to create issues on what can be improved!
 
 
